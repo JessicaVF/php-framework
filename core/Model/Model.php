@@ -16,8 +16,8 @@ abstract class Model
 
 
 /**
- * trouver un garage par son id
- * renvoie un tableau contenant un garage, ou un booleen
+ * trouver un élément par son id
+ * renvoie un tableau contenant l'élément, ou un booleen
  * si inexistant
  * 
  * @param integer $id
@@ -38,8 +38,8 @@ public function find(int $id)
 
 }
     /**
- * retourne un tableau contenant tous les items de 
- * la table garages
+ * retourne un tableau contenant tous les éléments de 
+ * une table
  * 
  * @return array
  */
@@ -57,7 +57,7 @@ public function findAll() : array
 
 
 /**
- * supprime un item via son ID
+ * supprime un élément via son ID
  * @param integer $id
  * @return void
  */

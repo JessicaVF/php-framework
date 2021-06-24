@@ -2,7 +2,9 @@
 
 class App
 {
-    
+/**
+ * Initialise l'application, en appelant la méthode "index".
+*/ 
     public static function process()
     {
         $controllerName = "home";

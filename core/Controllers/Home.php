@@ -9,9 +9,7 @@ class Home //extends Controller si besoin d'un model
 
 
     /**
-     * affiche l'accueil du framework
-     * 
-     * 
+     * affiche l'accueil du framework 
      */
     public function index()
     {
