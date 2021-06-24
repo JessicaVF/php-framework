@@ -1,9 +1,12 @@
 <?php
 
+//the namespace let us avoid confussions if we are calling
+//the controller class with the same name 
+
 namespace Model;
 
-//require_once "core/database.php";
-
+// this class is to be use as base, not to use directly
+// "abstract" make sure it's impossible to use this class directly
 abstract class Model
 {
     protected $pdo;
