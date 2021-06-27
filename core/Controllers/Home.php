@@ -6,6 +6,8 @@ namespace Controllers;
 class Home //extends Controller si besoin d'un model
 {
     //  protected $modelName; si besoin d'un model
+    // If we need a model name it will be like:
+    // protected $modelName = \Model\Home::class;
 
 
     /**

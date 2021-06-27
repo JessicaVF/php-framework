@@ -82,12 +82,12 @@
         </p>
         <p>
             This index method in particular evaluate if there's 
-            information send by our form, the information tha we named
+            information sent by our form, the information that we named
             "message".
         </p>
         <p>
             If there's not info we will have a pre-made message.
-            If we have the "message" we will save it as "$message".
+            If we have info, the "message" we will save it as "$message".
         </p>
         <p>
             At the end we call the render method of the Rendering class
@@ -102,7 +102,7 @@
         <p>
             At this point the example is too basic to require
             use of a model. But, if for example, we would save in a
-            databaseall the messages someone has type into the input box,
+            database all the messages someone has type into the input box,
             we would have to use a model to manage the access and
             comunication with the database
         </p>
@@ -111,3 +111,49 @@
     </li>
 
 </ul> 
+
+<h2> Index as the only access point and the role of App </h2>
+<p> App.php and index.php are vital, as they "start the magic". Let's start with App:</p>
+<ul>
+    <li>App.php:
+        <p> App is inside of the folder Core. It's an class and also it's
+        the place where we say to the website to wake up, to start existing.
+        </p>
+        <p> Inside App, we have the function process, that set two variables:
+            <ul>
+                <li>$controllerName:
+                    <p>
+                    The default is home, meaning the main page. This variable
+                    is called "controller" for a reason. As we will use our website
+                    we will need to use controllers to process the data and call their models.
+                    Thanks to App we can do that in a dynamic way with the "$_GET".
+                    </p>    
+                </li>
+                <li>$task
+                    <p>
+                     The default is index, meaning the function that "build" the main page. The 
+                     task name actually refer to a function. We need that the function actually
+                     exist into the controller we are calling. We set the task in a 
+                     dinamic way thanks to  "$_GET".  
+                    </p>
+                </li>
+                
+            </ul>
+        </p>
+    </li>
+    <li>index.php
+    <p>App have the function to put everything in moving, but is index.php who call that function.
+    It's all what that file does, but is essential</p>
+    </li>
+    <li>All together:
+    <p>Now, App is going to get the name of the controller and the task we want from it.
+        And then it will make the controller call the task.In a situation X where the task is
+        to get X items and show them (meaning, change the view), we are going to see a change in the 
+        url. We will get parametres, but we will be still in index.So, index.php is simple, but is 
+        alwayz the page were we will be
+    </p>
+    </li>
+</ul>
+
+For cover. The role of GET, POST?, inside of a controller-function. Rendering and http and when to use wich
+

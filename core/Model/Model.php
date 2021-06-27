@@ -10,13 +10,19 @@ namespace Model;
 abstract class Model
 {
     protected $pdo;
+    //the PDO gestiona la conexion con la base de datos, tengo que ir a getPdo() si quiero
+    // cambiar la contrasena y database que quiero usar
+
     protected $table;
+
+    //the table no sera definida en el modelo base, sino en cada modelo-hijo
 
     public function __construct(){
          $this->pdo = \Database::getPdo();
     }
 
-
+// A continuacion las funciones a usar en general por todas las clases.
+// Cabe resaltar que las funciones que son ultraespecificas de una funcion no estan aca:
 
 /**
  * trouver un élément par son id
