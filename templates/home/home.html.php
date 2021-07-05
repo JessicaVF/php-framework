@@ -24,6 +24,7 @@
         We can have also views based in the categories 
         (veggetables, meat, candy, etc).
     </p>
+    
 </div>
 
 <div class="row">
@@ -155,5 +156,24 @@
     </li>
 </ul>
 
+<p> NOTE: This here is the "object version" framerwork. The original framework
+    work with associative arrays and this ones use objects. That changes
+    alot behind the scene, but for now is enough to understand that:
+
+    <ol> 
+        <li> the class Database(.php) was change a bit </li>
+        <li> when we recovery items from a database the notation to 
+        call the propierties is "arrow notation". Example:
+        "$item->name" 
+        </li>
+        <li> The classes need to have the atributes of the items they are
+        representing. Is in the database the $item have a name, color and id
+        we need those propierties as attributes in the class Item.
+        </li>
+    </ol>
+
+
+
+<h6> Comming next </h6>    
 For cover. The role of GET, POST?, inside of a controller-function. Rendering and http and when to use wich
 
